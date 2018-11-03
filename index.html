@@ -33,31 +33,31 @@
         <form id="about-me-form" name="about-me-form"
         onsubmit="event.preventDefault(); checkAboutMe();"
         onreset="resetAboutMe()"
-      >
+        >
         <div>
-          <label for="cats">Do I like cats?</label>
-          <input type="text" id="cats" name="cats" placeholder="yes/no" />
+            <label for="cats">Do I like cats?</label>
+            <input type="text" id="cats" name="cats" placeholder="yes/no" />
         </div>
   
         <div>
             <label for="boats">Do I build boats?</label>
             <input type="text" id="boats" name="boats" placeholder="yes/no" />
-          </div>
+        </div>
 
         <div>
             <label for="motorcycles">Do I ride motorcycles?</label>
             <input type="text" id="motorcycles" name="motorcycles" placeholder="yes/no" />
-          </div>
+        </div>
 
         <div>
             <label for="coffee">Do I like coffee?</label>
             <input type="text" id="coffee" name="coffee" placeholder="yes/no" />
-          </div>
+        </div>
 
-          <div>
+        <div>
             <label for="sharks">Do I swim with sharks?</label>
             <input type="text" id="sharks" name="sharks" placeholder="yes/no" />
-          </div>
+        </div>
 
         <div>
           <button type="submit">Guess</button>
@@ -69,25 +69,39 @@
 
     </section>  
     
-    <section>
-
+    <!-- elements-counter -->
+    <section class="elements">
         <form>
-            <input type="checkbox" name="element" value="p" id="p"/>
-            <label for="p">p</label>
+            <fieldset>
+                <input type="checkbox" name="element" value="p" id="p"/>
+                <label for="p">p</label>
            
-            <input type="checkbox" name="element" value="section" id="section"/> 
-            <label for="section">section</label>
+                <input type="checkbox" name="element" value="section" id="section"/> 
+                <label for="section">section</label>
 
-            <input type="checkbox" name="element" value="input" id="input"/>
-            <label for="input">input</label>
+                <input type="checkbox" name="element" value="input" id="input"/>
+                <label for="input">input</label>
+
+            </fieldset>
            
         </form>
-        <button onclick="tryQuery(), displayMessage()">Submit</button>
+        
+        <div>
+            <button onclick="tryElementCounter()">Submit Counter</button>
+        </div>
+        
+         
+
+        <p id="response-p"></p>
+        <p id="response-section"></p>
+        <p id="response-input"></p>
+        <p id="response-button"></p>
 
     
     </section>
 
     <script src="about-me.js"></script>
+    <script src="element-guess.js"></script>
     
 
 </body>
