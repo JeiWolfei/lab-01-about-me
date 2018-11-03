@@ -3,12 +3,12 @@
 var pResponse = document.getElementById('response-p');
 var sectionResponse = document.getElementById('response-section');
 var inputResponse = document.getElementById('response-input');
-var buttonResponse = document.getElementById('response-button');
+
 
 function tryElementCounter() {
     var elements = document.querySelectorAll('input[name="element"]');
 
-    for(var i = 0; i < elements.lemgth; i++) {
+    for(var i = 0; i < elements.length; i++) {
         var element = document.querySelectorAll(elements[i].value);
         var inputName = elements[i].value;
         var length = element.length;
@@ -18,8 +18,14 @@ function tryElementCounter() {
             pResponse.textContent = response;
 
         }
+        else if(inputName === 'section'){
+            sectionResponse.textContent = response;
+        }
 
-        
+        else if(inputName === 'input'){
+            inputResponse.textContent = response;
+
+        }
     }
-
+        
 }
